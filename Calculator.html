@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Calculator</title>
+	    <style>
+			body {
+                background-color: hsl(240, 25%, 90%);
+				padding-top: 20px
+			}
+			.div1 {
+				display: flex;
+				justify-content: center;
+				margin-top:10px;
+			}	 
+			.spacing{
+				margin-left: 2px;
+				margin-right: 2px;
+			}
+			#answer{
+				font-size: 30px;				
+			}
+	   
+		</style>
+		<script>
+			function log() {
+				console.log("Hello World!")
+			}
+			function add(){
+				const a = document.getElementById("firstNumber").value;
+				const b = document.getElementById("secondNumber").value;
+				const c = parseInt(a) + parseInt(b);
+				
+				document.getElementById("answer").innerHTML = c;
+			}
+			function subtract(){
+				const a = document.getElementById("firstNumber").value;
+				const b = document.getElementById("secondNumber").value;
+				const c = parseInt(a) - parseInt(b);
+				
+				document.getElementById("answer").innerHTML = c;
+			}	
+			function reset(){				
+				document.getElementById("answer").innerHTML = "";
+			}			
+		</script>
+	</head>
+    <body>
+		<div class="div1">
+			<input type="number" id="firstNumber" class="spacing"></input>
+			<input type="number" id="secondNumber" class="spacing"></input>
+		</div>
+		<div class="div1">
+			<button onclick="add()">ADD</button>
+		</div>
+		<div class="div1">
+			<button onclick="subtract()">SUBTRACT</button>
+		</div>
+		<div class="div1">
+			<button onclick="reset()">CLEAR</button>			
+		</div>		
+		<div id="answer" class="div1">
+			
+		</div>
+    </body>
+</html>
